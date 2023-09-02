@@ -1,0 +1,9 @@
+@use '../abstracts/variables' as *;
+
+.heading {
+    font-family: $heading-font-family;
+    font-size: $heading-font-size;
+    color: $heading-color;
+    font-weight: $heading-font-weight;
+    line-height: $heading-line-height;
+}

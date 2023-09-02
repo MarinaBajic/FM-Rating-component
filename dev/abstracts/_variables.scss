@@ -1,0 +1,77 @@
+@use "colors" as *;
+@use "typography" as *;
+
+$color-accent: map-get($colors, primary);
+
+$color-text-100: map-get($colors, neutral, '100');
+$color-text-200: map-get($colors, neutral, '200');
+$color-text-300: map-get($colors, neutral, '300');
+
+$color-background: map-get($colors, secondary, '300');
+
+$color-text-interactive: $color-text-100;
+$color-text-interactive-hover: $color-accent;
+
+$border-radius-1: 4rem;
+$border-radius-2: 50%;
+
+// body
+$body-font-family: $sans-serif;
+$body-font-size: map-get($font-sizes, '100');
+$body-font-weight: map-get($font-weights, regular);
+$body-line-height: 1.5;
+$body-text-color: $color-text-200;
+$body-background-color: $color-background;
+
+$link-color: $color-text-interactive;
+$link-color-hover: $color-text-interactive-hover;
+$link-text-decoration: none;
+
+// headings
+$heading-font-family: $sans-serif;
+$heading-font-size: map-get($font-sizes, '400');
+$heading-color: $color-text-100;
+$heading-font-weight: map-get($font-weights, bold);
+$heading-line-height: 1.1;
+
+// layout
+$btn-gap: 2rem;
+
+$card-gap: 3rem;
+$text-gap: 1.2rem;
+
+$section-max-width: 45rem;
+$section-margin-block: clamp(8rem, 10vw, 24rem);
+
+// buttons
+$button-font-family: $body-font-family;
+$button-font-size: map-get($font-sizes, '200');
+$button-font-weight: map-get($font-weights, bold);
+$button-text-transform: uppercase;
+$button-letter-spacing: .4rem;
+$button-border: 0;
+
+
+$button-primary-color: $color-text-100;
+$button-primary-color-hover: $color-accent;
+$button-primary-background: $color-accent;
+$button-primary-background-hover: $color-text-100;
+$button-primary-border-radius: $border-radius-1;
+$button-primary-padding: 1.5rem 3rem;
+$button-primary-width: 100%;
+
+$button-secondary-color: $color-text-200;
+$button-secondary-color-hover: $color-text-100;
+$button-secondary-color-selected: $color-text-100;
+$button-secondary-background: map-get($colors, secondary, '100');
+$button-secondary-background-hover: $color-accent;
+$button-secondary-background-selected: $color-text-200;
+$button-secondary-border-radius: $border-radius-2;
+$button-secondary-width: 5.5rem;
+
+// card
+$card-background: map-get($colors, secondary, '200');
+$card-border-radius: $border-radius-1;
+$card-padding: 3.7rem;
+
+$announcement-padding: 1rem 1.8rem;

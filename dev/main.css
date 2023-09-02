@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+svg {
+  max-width: 100%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  text-rendering: optimizeSpeed;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  font-family: "Overpass", Verdana, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: hsl(217, 12%, 63%);
+  background-color: hsl(216, 12%, 8%);
+}
+
+a {
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+}
+
+a:is(:hover, :focus) {
+  color: hsl(25, 97%, 53%);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.heading {
+  font-family: "Overpass", Verdana, sans-serif;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.card {
+  background-color: hsl(210, 20%, 12%);
+  border-radius: 4rem;
+  padding: 3.7rem;
+  max-width: 45rem;
+  margin: clamp(8rem, 10vw, 24rem) auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.card_center {
+  align-items: center;
+  text-align: center;
+}
+
+.card__content_center {
+  align-items: center;
+}
+
+img {
+  margin: 0 auto;
+}
+
+.announcement {
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(213, 19%, 18%);
+  padding: 1rem 1.8rem;
+  border-radius: 4rem;
+  line-height: 1;
+}
+
+.btn {
+  cursor: pointer;
+  font-family: "Overpass", Verdana, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 0;
+  transition: 275ms ease;
+  text-align: center;
+}
+.btn[data-type=primary] {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
+  border-radius: 4rem;
+  width: 100%;
+  padding: 1.5rem 3rem;
+  letter-spacing: 0.4rem;
+}
+.btn[data-type=primary]:is(:hover, :focus) {
+  color: hsl(25, 97%, 53%);
+  background-color: hsl(0, 0%, 100%);
+}
+.btn[data-type=secondary] {
+  color: hsl(217, 12%, 63%);
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 50%;
+  width: 5.5rem;
+  height: 5.5rem;
+}
+.btn[data-type=secondary]:is(:hover, :focus) {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
+}
+.btn[data-type=secondary].selected {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(217, 12%, 63%);
+}
+
+.btn-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+}/*# sourceMappingURL=main.css.map */

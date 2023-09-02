@@ -1,0 +1,51 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.btn {
+    cursor: pointer;
+    font-family: $button-font-family;
+    font-size: $button-font-size;
+    font-weight: $button-font-weight;
+    text-transform: $button-text-transform;
+    border: $button-border;
+    transition: 275ms ease;
+    text-align: center;
+    
+    &[data-type="primary"] {
+        color: $button-primary-color;
+        background-color: $button-primary-background;
+        border-radius: $button-primary-border-radius;
+        width: $button-primary-width;
+        padding: $button-primary-padding;
+        letter-spacing: $button-letter-spacing;
+
+        &:is(:hover, :focus) {
+            color: $button-primary-color-hover;
+            background-color: $button-primary-background-hover;
+        }
+    }
+
+    &[data-type="secondary"] {
+        color: $button-secondary-color;
+        background-color: $button-secondary-background;
+        border-radius: $button-secondary-border-radius;
+        width: $button-secondary-width;
+        height: $button-secondary-width;
+
+        &:is(:hover, :focus) {
+            color: $button-secondary-color-hover;
+            background-color: $button-secondary-background-hover;
+        }
+
+        &.selected {
+            color: $button-secondary-color-selected;
+            background-color: $button-secondary-background-selected;
+        }
+    }
+}
+
+.btn-wrapper {
+    @include flex-box($btn-gap);
+
+    width: 100%;
+}

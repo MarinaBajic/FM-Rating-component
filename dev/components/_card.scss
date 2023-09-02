@@ -1,0 +1,38 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.card {
+    background-color: $card-background;
+    border-radius: $card-border-radius;
+    padding: $card-padding;
+
+    max-width: $section-max-width;
+    margin: $section-margin-block auto;
+
+    @include flex-box($card-gap, column, space-between, flex-start);
+}
+
+.card__content {
+    @include flex-box($text-gap, column, space-between, flex-start)
+}
+
+.card_center {
+    align-items: center;
+    text-align: center;
+}
+
+.card__content_center {
+    align-items: center;
+}
+
+img {
+    margin: 0 auto;
+}
+
+.announcement {
+    color: $color-accent;
+    background-color: $button-secondary-background;
+    padding: $announcement-padding;
+    border-radius: $button-primary-border-radius;
+    line-height: 1;
+}
